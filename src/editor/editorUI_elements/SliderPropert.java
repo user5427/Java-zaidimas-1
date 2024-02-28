@@ -1,4 +1,4 @@
-package editor;
+package editor.editorUI_elements;
 
 import java.awt.Rectangle;
 

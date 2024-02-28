@@ -2,24 +2,21 @@ package utils;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.imageio.ImageIO;
 
-import editor.LevelData;
+import levels.LevelData;
 
 public class LoadSave {
 	public static final String PLAYER_ATLAS = "player_sprites.png";
 	public static final String LEVEL_ATLAS = "new_tile_sheet.png";
-	public static final String LEVEL_ONE_DATA = "level_one_complex.png";
+	public static final String LEVEL_ONE_DATA = "levels/level1.png";
 	public static final String LEVEL_TWO_DATA = "levels/testi.png";
 	public static final String LEVEL_THREE_DATA = "levels/level3.png";
 	public static final String MENU_BUTTONS = "button_atlas.png";
@@ -44,6 +41,7 @@ public class LoadSave {
 	public static final String NUM_ARRAY = "num_array.png";
 	public static final String START_GAME_BUTTON = "start_game_button.png";
 	public static final String LOAD_LEVEL_BUTTON = "load_level_button.png";
+	public static final String HOME_BUTTON = "home_button.png";
 
 	public static BufferedImage GetSpriteAtlas(String fileName) {
 		BufferedImage img = null;	

@@ -232,7 +232,7 @@ public class Playing extends State implements Statemethods{
 	public Player getPlayer() {
 		return player;
 	}
-
+	public LevelManager getLevelManager() { return levelManager; }
 	public void resetGame(){
 		player.resetPlayer();
 		player.resetScore();

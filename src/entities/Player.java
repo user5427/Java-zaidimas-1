@@ -8,7 +8,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
-import editor.LevelData;
+import levels.LevelData;
 import main.Game;
 import utils.LoadSave;
 

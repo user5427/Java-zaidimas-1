@@ -1,15 +1,13 @@
-package editor;
+package editor.editorUI_elements;
 
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-import ui.PauseButton;
 import utils.LoadSave;
-import static utils.Constants.EditorUI.BUTTON.*;
 
 
-public class Button extends EditorButton implements MouseUser{
+public class Button extends EditorButton implements MouseUser {
 	private BufferedImage[] imgs;
 	private int animations, index;
 	private boolean mouseOver, mousePressed;

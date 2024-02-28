@@ -1,4 +1,4 @@
-package editor;
+package editor.FileManagers;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
@@ -22,10 +22,10 @@ public class FileChooser extends JFrame implements ActionListener {
     private JButton button1;
     private JButton button2;
     private JButton button3;
-    
+    boolean loadingOnly;
     private static boolean menuOpen = false;
-    
-    FileChooser()
+
+    public FileChooser()
     {
     	frame = new JFrame("file chooser");
         panel = new JPanel();
@@ -61,7 +61,8 @@ public class FileChooser extends JFrame implements ActionListener {
  
         // add action listener to the button to capture user
         // response on buttons
-        button1.addActionListener(this);
+        if(!loadingOnly)
+            button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
  
@@ -69,7 +70,8 @@ public class FileChooser extends JFrame implements ActionListener {
         
  
         // add buttons to the frame
-        panel.add(button1);
+        if(!loadingOnly)
+            panel.add(button1);
         panel.add(button2);
         panel.add(button3);
         // set the label to its initial value
@@ -155,4 +157,8 @@ public class FileChooser extends JFrame implements ActionListener {
 		loading = false;
 		
 	}
+
+    public void setLoadOnly(boolean loading){
+        loadingOnly = loading;
+    }
 }

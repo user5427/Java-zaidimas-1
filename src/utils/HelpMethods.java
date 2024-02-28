@@ -4,7 +4,7 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 
-import editor.LevelData;
+import levels.LevelData;
 import main.Game;
 
 public class HelpMethods {
@@ -31,7 +31,7 @@ public class HelpMethods {
 		
 		int value = lvlData[(int)(yIndex)][(int)(xIndex)];
 		
-		if (value == 11 || value == 48 || value == 50)
+		if (value == 11 || value == 48 || value == 50 || value == 51)
 			return false;
 		else
 			return true;

@@ -1,27 +1,29 @@
-package editor;
+package editor.FileManagers;
+import editor.FileManagers.FileChooser;
+import levels.LevelData;
+
 import java.io.File;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 
 public class FileManager {
 	private FileChooser fileChooser;
 	private LevelData levelData;
+	private boolean levelDataUpdated;
 	public FileManager(FileChooser fileChooser, LevelData levelData) {
 		this.fileChooser = fileChooser;
 		this.levelData = levelData;
 	}
 	public void update() {
+		levelDataUpdated = false;
 		if (fileChooser.isHasFileName() && !fileChooser.getMenuState()) {
 			processFile();
 			fileChooser.resetChooser();
+			levelDataUpdated = true;
 		}
 			
 	}
@@ -81,6 +83,9 @@ public class FileManager {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
+	public boolean isLevelDataUpdated() {
+		return levelDataUpdated;
+	}
 }

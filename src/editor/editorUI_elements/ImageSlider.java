@@ -1,15 +1,15 @@
-package editor;
+package editor.editorUI_elements;
 
 import static utils.Constants.EditorUI.IMAGE_BAR_HEIGHT;
 import static utils.Constants.EditorUI.IMAGE_BAR_WIDTH;
 import static utils.Constants.EditorUI.SEPERATION_BETWEEN_FRAMES;
 import static utils.Constants.EditorUI.SLIDER_SLOW_DOWN_SPEED;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import editor.EditorUI;
 import main.Game;
 import utils.LoadSave;
 
@@ -137,14 +137,10 @@ public class ImageSlider {
 	}
 	
 	private void setTile(int index) {
-		// TODO Auto-generated method stub
 		selectedIndex = index;
+		editorUI.setSelectedTile(selectedIndex);
 	}
 	
-	public int getTile() {
-		return selectedIndex;
-	}
-
 	public void mouseDragged(MouseEvent e) {
 		for (ImageFrame im : imageFrames) {
 			if (im.isMousePressed()) {

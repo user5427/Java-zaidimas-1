@@ -1,4 +1,4 @@
-package editor;
+package editor.editorUI_elements;
 
 import static utils.Constants.UI.VolumeButtons.SLIDER_DEFAULT_WIDTH;
 import static utils.Constants.UI.VolumeButtons.VOLUME_DEFAULT_HEIGHT;
@@ -9,10 +9,10 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-import main.Game;
+import editor.EditorUI;
 import utils.LoadSave;
 import static utils.Constants.EditorUI.SLIDE_BUTTON_WIDTH;;
-public class Slider extends SliderPropert{
+public class Slider extends SliderPropert {
 	
 	private BufferedImage[] imgs;
 	private BufferedImage slider;

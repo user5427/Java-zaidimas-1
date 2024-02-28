@@ -1,6 +1,4 @@
-package editor;
-
-import java.util.Iterator;
+package levels;
 
 public class LevelData {
 	private int lvlData[];
@@ -15,6 +13,11 @@ public class LevelData {
 		this.xSize = xSize;
 		this.ySize = ySize;
 	}
+
+	public LevelData() {
+
+	}
+
 	public int[] getLvlData() {
 		return lvlData;
 	}
